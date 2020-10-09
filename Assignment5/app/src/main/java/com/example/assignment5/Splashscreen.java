@@ -2,6 +2,7 @@ package com.example.assignment5;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -115,6 +116,9 @@ public class Splashscreen extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
        // findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+        MediaPlayer mpMusic = MediaPlayer.create(this, R.raw.music);
+        mpMusic.start();
 
         (new Handler()).postDelayed(new Runnable() {
             @Override
